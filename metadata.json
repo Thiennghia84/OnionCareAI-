@@ -1,0 +1,7 @@
+{
+  "name": "OnionCare AI",
+  "description": "Giải pháp nông nghiệp thông minh nhận diện sâu bệnh và quản lý tưới tiêu cho cây hành.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

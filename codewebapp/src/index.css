@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --animate-blob: blob 7s infinite;
+  --animate-in: in 0.2s ease-out;
+  --animate-out: out 0.2s ease-in;
+  --animate-fade-in: fade-in 0.2s ease-out;
+  --animate-fade-out: fade-out 0.2s ease-in;
+  --animate-zoom-in-95: zoom-in-95 0.2s ease-out;
+  --animate-zoom-out-95: zoom-out-95 0.2s ease-in;
+  --animate-slide-in-from-bottom-4: slide-in-from-bottom-4 0.2s ease-out;
+  --animate-slide-in-from-bottom-6: slide-in-from-bottom-6 0.2s ease-out;
+
+  @keyframes blob {
+    0% { transform: translate(0px, 0px) scale(1); }
+    33% { transform: translate(30px, -50px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
+    100% { transform: translate(0px, 0px) scale(1); }
+  }
+  @keyframes in {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  @keyframes out {
+    from { opacity: 1; transform: scale(1); }
+    to { opacity: 0; transform: scale(0.95); }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+  @keyframes zoom-in-95 {
+    from { transform: scale(0.95); }
+    to { transform: scale(1); }
+  }
+  @keyframes zoom-out-95 {
+    from { transform: scale(1); }
+    to { transform: scale(0.95); }
+  }
+  @keyframes slide-in-from-bottom-4 {
+    from { transform: translateY(1rem); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  @keyframes slide-in-from-bottom-6 {
+    from { transform: translateY(1.5rem); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+}
+
+/* Custom Utilities */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.mask-linear {
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
